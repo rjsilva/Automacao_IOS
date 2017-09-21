@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import br.com.util.AuxRobot;
 import br.com.util.Devices;
 import br.com.util.DriverFactory;
+import br.com.util.UniqueDriver;
 
 public class GerarCpfPage {
 
@@ -31,7 +32,7 @@ public class GerarCpfPage {
 	}
 	
 	public void runTest(Devices device) throws MalformedURLException {
-		driver = new DriverFactory().getDriver(device);
+		driver = UniqueDriver.getDriver(device);
 		this.robot = new AuxRobot(driver);
 	}
 

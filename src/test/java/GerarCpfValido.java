@@ -17,7 +17,6 @@ public class GerarCpfValido implements InitializeTest {
 
 	private WebDriver driver = null;
 
-
 	@Before
 	public void start() {
 
