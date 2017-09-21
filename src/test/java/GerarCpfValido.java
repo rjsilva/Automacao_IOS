@@ -9,13 +9,12 @@ import org.openqa.selenium.WebDriver;
 import br.com.action.InitializeTest;
 import br.com.pageobject.GerarCpfPage;
 import br.com.util.Devices;
-import br.com.util.DriverFactory;
 import br.com.util.InitializeServer;
 
 public class GerarCpfValido implements InitializeTest {
 
 	private GerarCpfPage gerarCpfPage = null;
-	private WebDriver driver = null;
+	protected WebDriver driver = null;
 
 	@Before
 	public void start() {
