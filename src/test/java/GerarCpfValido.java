@@ -15,7 +15,7 @@ import br.com.util.InitializeServer;
 public class GerarCpfValido implements InitializeTest {
 
 	private GerarCpfPage gerarCpfPage = null;
-	private static WebDriver driver = null;
+	private WebDriver driver = null;
 
 	@Before
 	public void start() {
