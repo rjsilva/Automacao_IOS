@@ -15,18 +15,21 @@ public class GerarCpfValido implements InitializeTest {
 
 	private GerarCpfPage gerarCpfPage = null;
 
+	@SuppressWarnings("unused")
 	private WebDriver driver = null;
 
 	@Before
 	public void start() {
-
-		new InitializeServer().statrtServer();
+		
+	    InitializeServer.statrtServer();
+	    
 	}
 
 	@Test
 	public void test() {
 
 		try {
+			
 			gerarCpfPage = new GerarCpfPage();
 			gerarCpfPage.runTest(Devices.IOS);
 			String url = "https://www.geradordecpf.org/";
@@ -34,6 +37,7 @@ public class GerarCpfValido implements InitializeTest {
 			gerarCpfPage.clickGerarCpf("gerarcpfsucesso");
 			gerarCpfPage.clickValidar("validacpfsucesso");
 			Assert.assertTrue(gerarCpfPage.validarCpf());
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -43,7 +47,9 @@ public class GerarCpfValido implements InitializeTest {
 
 	@After
 	public void finish() {
-		new InitializeServer().stopServer();
+		
+		InitializeServer.stopServer();
+		
 	}
 
 }
