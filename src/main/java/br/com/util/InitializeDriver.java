@@ -1,19 +1,13 @@
 package br.com.util;
 
-public class InitializeDriver {
+import br.com.helper.AuxRobot;
+
+public class InitializeDriver extends AuxRobot {
 	
-	private static InitializeDriver uniqueInstance;
-
-	private InitializeDriver() {
-		
-	}
-
-	public static synchronized InitializeDriver getInstance() {
-		
-		if (uniqueInstance == null)
-			uniqueInstance = new InitializeDriver();
-
-		return uniqueInstance;
+	
+	
+	public static void closeDriver() {
+		closeDriver();
 	}
 
 }
